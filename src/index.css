@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'Noto Sans Georgian', 'Noto Sans', sans-serif; color: #241A0B; background: #FFF8F3; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #FFF8F3; }
+button, input { font: inherit; }
+button, a { transition: all 180ms ease; }
+:focus-visible { outline: 1.5px solid #3B6633; outline-offset: 3px; }
+.serif { font-family: 'Noto Serif Georgian', 'Noto Serif', serif; }
+.label { font-size: 11px; line-height: 18px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.pattern-dots { background-color: #fffaf4; background-image: radial-gradient(#8da58a 1.1px, transparent 1.1px); background-size: 12px 12px; }
+.pattern-lines { background-color: #fffaf4; background-image: repeating-linear-gradient(to bottom, transparent 0 20px, #d8bfa8 21px 22px); }
+.pattern-squared { background-color: #fffaf4; background-image: linear-gradient(#e4cdb9 1px, transparent 1px), linear-gradient(90deg, #e4cdb9 1px, transparent 1px); background-size: 22px 22px; }
+.pattern-cornell { background-color: #fffaf4; background-image: linear-gradient(to right, transparent 0 70%, #d8bfa8 70% 71%, transparent 71%), linear-gradient(to bottom, transparent 0 78%, #d8bfa8 78% 79%, transparent 79%); }
+.pattern-planner { background-color: #fffaf4; background-image: linear-gradient(#e4cdb9 1px, transparent 1px), linear-gradient(90deg, #e4cdb9 1px, transparent 1px); background-size: 50% 50%; }
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-[1280px] px-5 md:px-8; }
+  .btn-primary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-forest px-5 py-3 text-sm font-semibold text-white hover:bg-forest-dark; }
+  .btn-secondary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-deep px-5 py-3 text-sm font-semibold text-deep hover:bg-deep hover:text-white; }
+  .btn-ghost { @apply text-sm font-semibold text-deep hover:underline; }
+  .field { @apply w-full rounded-lg border border-line/30 bg-high/60 px-4 py-3 text-sm text-ink placeholder:text-muted/60; }
+  .card { @apply rounded-xl border border-line/35 bg-white shadow-soft; }
+}
